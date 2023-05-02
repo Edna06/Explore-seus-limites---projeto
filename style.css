@@ -5,7 +5,7 @@
 }
 
 :root {
-  font-size: 62,5%;
+  font-size: 62.5%;
 
   --bg-primary: #F9F4FB;
   --bg-twoSection: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
@@ -23,6 +23,7 @@ body {
 
   background: var(--bg-primary);
   font-family: 'Mulish', sans-serif;
+
 }
 
 .initial_page {
@@ -78,6 +79,7 @@ height: 4.58rem;
 
 
 .cards {
+width: 100%;
 background: var(--color-text);
 
 padding: 5.30rem 3.9rem;
