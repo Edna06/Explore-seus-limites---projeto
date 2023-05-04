@@ -24,9 +24,13 @@ body {
   background: var(--bg-primary);
   font-family: 'Mulish', sans-serif;
 
+  overflow-x: hidden;
 }
 
 .initial_page {
+  height: 100%;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,6 +210,8 @@ font-weight: 600;
 }
 
 .contact input[type=submit]{
+  border: none;
+
   background: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
   border-radius: 1.6rem;
 
@@ -219,6 +225,19 @@ font-weight: 600;
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 24px;
+
+  transition: all .4s;
+}
+
+.contact input[type=submit]:hover{
+ cursor: pointer;
+
+ filter: brightness(0.80);
+ transform: scale(0.97);
+}
+
+.contact .stars {
+  display: none;
 }
 
 footer {
@@ -238,4 +257,113 @@ footer p {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.4rem;
+}
+
+
+@media (min-width: 1024px){
+
+.initial_page {
+
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-rows: auto auto;
+
+  grid-template-areas:
+  'content image';
+
+  margin-bottom: 10rem;
+
+  }
+
+
+  .initial_page img{
+    grid-area: image;
+
+    width: 71.936rem;
+    height: 73.236rem;
+  }
+
+
+    .initial_page .description{
+      grid-area: content;
+      margin-top: 24rem;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    .initial_page h1 {
+      font-size: 5.8rem;
+      margin-top: 21rem;
+      margin-bottom: 3rem;
+    }
+
+    .initial_page p {
+      font-size: 3.2rem;
+    }
+
+
+    .initial_page .arrow{
+
+     width: fit-content;
+
+     position: absolute;
+
+      border-radius: 60rem;
+      padding: 2.55rem 1rem 2.30rem;
+
+      margin-top: 70rem;
+      margin-left: 10.9rem;
+    }
+
+
+
+    .cards {
+      width: 100%;
+
+      padding: 6.4rem 11.1rem;
+
+      flex-direction: row;
+      justify-content: space-between;
+      }
+
+
+    .cards .card {
+      width: 36.6rem;
+    }
+
+
+    .contact {
+      display: flex;
+
+      padding: 0;
+      justify-content: space-between;
+    }
+
+    .contact .form {
+      padding: 9.5rem 10.9rem;
+      width: 100%;
+    }
+
+    .contact .form form {
+      align-items: flex-start;
+
+    }
+
+    .contact form .name,
+    .contact form .email {
+
+     width: 60rem;
+    }
+
+    .contact form .text-area {
+     width: 60rem;
+    }
+
+
+    .contact .stars {
+      width: 64.4rem;
+
+     display:flex;
+    }
 }
